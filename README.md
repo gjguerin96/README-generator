@@ -1,7 +1,7 @@
-# Portfolio
+# test title
 
 ## Description
-This is a portfolio where I can show my work.
+test description
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -12,13 +12,13 @@ This is a portfolio where I can show my work.
 - [Questions](#questions)
 
 ## Installation
-Just do a git pull.
+test installation
 
 ## Usage
-There are links you can click to see my projects or contact me.
+test usage
 
 ## Contributing
-I made it.
+test contribution
 
 ## License
 a
@@ -30,4 +30,4 @@ a
 undefined
 
 ## Questions
-If you have any questions, reach out to me at gjg96 or find me on github at gjg.
+If you have any questions, reach out to me at test email or find me on [github](github.com/gjguerin96).
