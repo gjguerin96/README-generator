@@ -93,7 +93,7 @@ ${answers.license}
 ${answers.tests}
 
 ## Questions
-If you have any questions, reach out to me at ${answers.email} or find me on [github](github.com/${answers.github}).`
+If you have any questions, reach out to me at ${answers.email} or find me on [github](https://www.github.com/${answers.github}).`
     // console.log(content)
     fs.writeFile('README.md',content, (error) =>{
         if(error) throw error;
