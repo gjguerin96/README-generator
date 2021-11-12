@@ -1,7 +1,9 @@
-# adsas
+# the title
 
 ## Description
-sdsad
+desc
+
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -12,22 +14,19 @@ sdsad
 - [Questions](#questions)
 
 ## Installation
-xxcvvx
+install
 
 ## Usage
-use
+usage
 
 ## Contributing
-no
+contri
 
 ## License
-a
-
-## Badges
-
+This application is covered under the Mozilla Public license. 
 
 ## Tests
-undefined
+testi
 
 ## Questions
-If you have any questions, reach out to me at yes or find me on [github](https://www.github.com/gjguerin96).
+If you have any questions, reach out to me at my email or find me on [github](https://www.github.com/username).

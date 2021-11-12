@@ -47,24 +47,34 @@ const questions = [
     {
         type:'list',
         name: 'license',
-        message: 'Enter licensing information.',
-        choices: ['a','b','c']
+        message: 'Choose licensing information.',
+        choices: ['MIT','GNU General Public','Mozilla Public','Apache']
     }
 ];
 
 // TODO: Create a function to write README file
 inquirer.prompt(questions).then((answers) => {
-    // console.log(answers.title)
-    // console.log(answers.description)
-    // console.log(answers.installation)
-    // console.log(answers.usage)
-    // console.log(answers.contribution)
-    // console.log(answers.test)
-    // console.log(answers.license)
+    function badge() {
+        if (answers.license === 'MIT') {
+            return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
+        }
+        else if (answers.license === 'GNU General Public') {
+            return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]'
+        }
+        else if (answers.license === 'Mozilla Public') {
+            return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]'
+        }
+        else if (answers.license === 'Apache') {
+            return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]'
+        }
+    }
+    
     const content = `# ${answers.title}
 
 ## Description
 ${answers.description}
+
+` + badge() + `
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -84,13 +94,10 @@ ${answers.usage}
 ${answers.contribution}
 
 ## License
-${answers.license}
-
-## Badges
-
+This application is covered under the ${answers.license} license. 
 
 ## Tests
-${answers.tests}
+${answers.test}
 
 ## Questions
 If you have any questions, reach out to me at ${answers.email} or find me on [github](https://www.github.com/${answers.github}).`
