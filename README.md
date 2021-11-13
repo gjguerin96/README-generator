@@ -1,8 +1,8 @@
-# aasdsad
+# README Generator
 
 ## Description
 
-asdsad
+I built this application so that I could have a useful tool to fill out READMEs. READMEs are important but tedious to make, so having an application do much of the work for you is very convenient.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -16,23 +16,23 @@ asdsad
 
 ## Installation
 
-asdsada
+Requires node.js, inquirer, and fs.
 
 ## Usage
 
-asdsad
+See video walkthrough below.
 
 ## Contributing
 
-asdsad
+I built this application with some assistance from my tutor, Vinnie Lopez.
 
 ## Tests
 
-asdad
+N/A
 
 ## Questions
 
-If you have any questions, reach out to me at asdsad or find me on [github](https://www.github.com/asddasd).
+If you have any questions, reach out to me at gjguerin96@gmail.com or find me on [github](https://www.github.com/gjguerin96).
 
 ## License
 
