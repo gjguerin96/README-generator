@@ -48,7 +48,7 @@ const questions = [
         type:'list',
         name: 'license',
         message: 'Choose licensing information.',
-        choices: ['MIT','GNU General Public','Mozilla Public','Apache']
+        choices: ['MIT','GNU General Public','Mozilla Public','Apache', 'None']
     }
 ];
 
@@ -56,51 +56,77 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
     function badge() {
         if (answers.license === 'MIT') {
-            return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
+            return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
         }
         else if (answers.license === 'GNU General Public') {
-            return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]'
+            return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
         }
         else if (answers.license === 'Mozilla Public') {
-            return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]'
+            return '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)'
         }
         else if (answers.license === 'Apache') {
-            return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]'
+            return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
         }
+        else 
+            return ''
+    }
+
+    function tableOfContents () {
+        if (answers.license === 'None') {
+            return ''
+        }
+        else
+            return '- [License](#license)'
+    }
+
+    function licenseContent() {
+        if (answers.license === 'None') {
+            return ''
+        }
+        else
+            return `## License
+
+This application is covered under the ${answers.license} license.`
     }
     
     const content = `# ${answers.title}
 
 ## Description
+
 ${answers.description}
 
-` + badge() + `
+${badge()}
 
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Tests](#tests)
 - [Questions](#questions)
+${tableOfContents()}
 
 ## Installation
+
 ${answers.installation}
 
 ## Usage
+
 ${answers.usage}
 
 ## Contributing
+
 ${answers.contribution}
 
-## License
-This application is covered under the ${answers.license} license. 
-
 ## Tests
+
 ${answers.test}
 
 ## Questions
-If you have any questions, reach out to me at ${answers.email} or find me on [github](https://www.github.com/${answers.github}).`
+
+If you have any questions, reach out to me at ${answers.email} or find me on [github](https://www.github.com/${answers.github}).
+
+${licenseContent()}`
+
     // console.log(content)
     fs.writeFile('README.md',content, (error) =>{
         if(error) throw error;
@@ -108,8 +134,3 @@ If you have any questions, reach out to me at ${answers.email} or find me on [gi
     })
 })
 
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
