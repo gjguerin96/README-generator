@@ -26,7 +26,7 @@ See video walkthrough below. Use node index.js to access the file, and then you 
 
 At the end you can select which license you want, or if you want none. If you choose a license, a badge will be added. If you choose none, there will be no badge and the license section will be removed along with the license item from the table of contents.
 
-Video walkthrough: https://drive.google.com/file/d/1EEjQJq0Xa0uJ1qlXgR0wvtKPvegKu9tt/view
+Video walkthrough: https://drive.google.com/file/d/1EEjQJq0Xa0uJ1qlXgR0wvtKPvegKu9tt/view?usp=sharing
 
 ## Contributing
 
